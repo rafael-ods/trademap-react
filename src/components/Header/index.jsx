@@ -47,10 +47,14 @@ const Header = () => {
               Trademap Web
             </Button>
           </NavLink>
-          <Button>
+          <NavLink 
+            style={{ textDecoration: "none" }}
+            to="https://rafael-ods.github.io/Login-TradeMap/">
+          <Button >
             <IconUser />
             Cadastre-se Grátis!
           </Button>
+          </NavLink>
         </nav>
           <FiMenu 
             className={style.menuHamburguer}

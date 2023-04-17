@@ -1,0 +1,61 @@
+@import '../../style/variable';
+
+
+.button {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+    cursor: pointer;
+    background: linear-gradient(184deg, #00FFC4 0%, #02C989 100%);
+    box-shadow: 5px 5px 19px rgba(0, 254, 172, 0.18);
+    border-radius: 4px;
+    border: none;
+
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 12px;
+    padding: 9px 13px;
+
+    outline: none;
+    text-transform: uppercase;
+    transition: all .3s;
+    width: auto;
+
+    &:hover {
+        transform: translateY(-8px);
+        transition-duration: .3s;
+        transition-timing-function: ease-out;
+        background: $bg-grandient-hover;
+    }
+}
+
+.button.transparent {
+    color: $color-green;
+    background: $bg-gray-dark;
+
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: $color-green;
+    box-shadow: none;
+    padding: 11px 14px;
+
+    font-weight: 100;
+    font-size: 12px;
+    line-height: 12px;
+    &:hover {
+        background: #1a1b23;
+    }
+}
+
+.button.small {
+    padding: 13px 24px;
+    background: $bg-grandient-hover;
+    box-shadow: none;
+    border: none;
+    &:hover {
+        transform: none;
+        color: $color-white;
+    }
+}
+

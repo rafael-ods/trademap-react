@@ -1,0 +1,37 @@
+@import '../../style/variable';
+
+.menu {
+    .menuList {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        column-gap: 6px;
+        
+        &__link {
+            display: flex;
+            color: $color-gray;
+            font-size: 14px;
+            background: #182530;
+            padding: 7px;
+            border-radius: 2.64px;
+
+            &:hover {
+                color: $bg-gray-dark;
+                background-color: $color-green;
+                transform: scale(1.1);
+                transition-duration: .3s;
+                opacity: .9;
+            }
+        }
+    }
+}
+
+.menuList.position {
+    justify-content: flex-start;
+}
+
+.menuList__link.background {
+    color: $bg-black;
+    background: $color-green;
+    
+}

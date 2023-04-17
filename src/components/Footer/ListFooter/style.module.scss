@@ -1,0 +1,29 @@
+@import '../../../style/variable';
+
+.menuList {
+    &__title {
+        color: #EFEFEF;
+        ;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        text-transform: uppercase;
+        padding-bottom: 10%;
+    }
+
+    &__item {
+        margin-bottom: 11.5px;
+    }
+
+    &__link {
+        color: $color-green-ligth;
+        font-weight: 100;
+        font-size: 15px;
+        line-height: 20px;
+        text-decoration: none;
+        transition: color 0.3s;
+        &:hover {
+            color: $color-green-dark;
+        }
+    }
+}

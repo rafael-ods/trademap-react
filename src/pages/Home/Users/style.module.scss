@@ -1,0 +1,113 @@
+@import '../../../style/variable';
+
+.section {
+    background-color: $color-white;
+    padding: 10px;
+
+    .container {
+        padding: 3% 0px;
+        max-width: 1140px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        .containerContext {
+            align-self: baseline;
+            margin-top: 40px;
+
+            &__title {
+                color: #01E59B;
+                ;
+                font-weight: 700;
+                font-size: 40px;
+                line-height: 48px;
+                margin-bottom: 9px;
+            }
+
+            &__paragraph {
+                color: $bg-black;
+                font-size: 18px;
+                line-height: 27px;
+                margin-bottom: 60px;
+            }
+        }
+
+        .containerButton {
+            display: flex;
+            align-items: center;
+            column-gap: 20px;
+        }
+
+        &__banner {
+            background: url('../../../assets/image/banner.png') center / cover no-repeat;
+            width: 595.41px;
+            height: 462.62px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .section {
+        .container {
+            &__banner {
+                width: 533.73px;
+                height: 414.53px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section {
+        .container {
+            flex-direction: column;
+
+            &__banner {
+                align-self: flex-end;
+                width: 397.64px;
+                height: 308.63px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .section {
+        padding: 0px 7%;
+
+        .container {
+            padding: 10px;
+            .containerContext {
+                &__title {
+                    font-size: 32px;
+                }
+
+                &__paragraph {
+                    margin-bottom: 20px;
+                }
+            }
+
+            &__banner {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .section {
+        .container {
+            .containerContext {
+                &__paragraph {
+                    font-size: 17px;
+                }
+            }
+
+            &__banner {
+                margin-top: 10px;
+                width: 235.84px;
+                height: 183.25px;
+            }
+        }
+    }
+}

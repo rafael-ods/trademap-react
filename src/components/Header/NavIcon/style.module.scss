@@ -1,0 +1,50 @@
+@import '../../../style/variable';
+
+.container {
+    background: $bg-black;
+    padding: 10px 10px;
+
+    .containerDiv {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 1140px;
+    }
+
+    .menu {
+        width: 50%;
+        .menuList {
+            display: flex;
+            align-self: center;
+            column-gap: 15px;
+
+            &__link {
+                text-decoration: none;
+                display: flex;
+                column-gap: 9.79px;
+            }
+
+            &__span {
+                color: $color-green;
+                transition: color 0.3s;
+                font-weight: 200;
+                font-size: 12px;
+                line-height: 16px;
+                &:hover {
+                    color: $color-green-dark;
+                }
+            }
+        }
+    }
+    .navIcon {
+        width: 50%;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .container {
+        display: none
+    }
+}

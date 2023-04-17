@@ -1,0 +1,122 @@
+@import '../../style/variable';
+
+.header {
+    background: $bg-gray-dark;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        max-width: 1140px;
+        margin: 0 auto;
+
+        .menu {
+            display: flex;
+            align-items: center;
+            column-gap: 35px;
+
+            .menuList {
+                display: flex;
+                column-gap: 39px;
+
+                &__link {
+                    color: $color-white;
+                    font-weight: 300;
+                    font-size: 18px;
+                    line-height: 22px;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: $color-green;
+                    }
+                }
+
+                .menulistActive {
+                    color: $color-green;
+                }
+            }
+        }
+
+        .containerButton {
+            display: flex;
+            align-items: center;
+            column-gap: 27.71px;
+        }
+        .menuHamburguer {
+            color: $color-green-ligth;
+            font-size: 30px;
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .header {
+        .container {
+            .menu {
+                &__logo {
+                    width: 113.11px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        .container {
+            .menu {
+                .menuList {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .header {
+        .container {
+            .menu {
+                padding-left: 29px;
+                &__logo {
+                   width: 96px;
+                }
+                
+            }
+            .containerButton {
+                display: none;
+            }
+            .menuHamburguer {
+                display: block;
+                margin-right: 25px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .header {
+        .container {
+            .menu {
+                .menu__logo  {
+                    width: 82.38px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .header {
+        .container {
+            .menu {
+                padding-left: 15px;
+                .menu__logo  {
+                    width: 67.36px;
+                }
+            }
+        }
+    }
+}

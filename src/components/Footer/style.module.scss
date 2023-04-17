@@ -1,0 +1,136 @@
+@import '../../style/variable';
+
+.footer {
+    background: $bg-black;
+
+    .container {
+        display: flex;
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 57.59px 0px;
+
+        .boxTrademap {
+            padding: 20px;
+            max-width: 308px;
+
+            &__title {
+                color: #EFEFEF;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 17px;
+                text-transform: uppercase;
+                margin: 12px 0px;
+            }
+
+            &__paragraph {
+                color: #E6EAEE;
+                ;
+                font-weight: 200;
+                font-size: 15px;
+                line-height: 22px;
+                margin-bottom: 24px;
+            }
+        }
+
+        .boxContact {
+            padding: 20px;
+            max-width: 288.94px;
+
+            &__title {
+                color: #EFEFEF;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 17px;
+                margin-bottom: 5px;
+                text-transform: uppercase;
+            }
+
+            &__email {
+                color: #E6EAEE;
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 20px;
+            }
+
+            &__paragraph {
+                color: #E6EAEE;
+                font-weight: 200;
+                font-size: 11px;
+                line-height: 20px;
+                margin: 20px 0px;
+                text-transform: uppercase;
+            }
+
+        }
+
+        .boxListFooter {
+            padding: 20px;
+            max-width: 256px;
+        }
+    }
+
+    .term {
+        background: $bg-gray-dark;
+
+        .containerTerm {
+            padding: 25px 10px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1140px;
+            margin: 0 auto;
+
+            p {
+                color: #C2C2C2;
+                font-weight: 200;
+                font-size: 13px;
+                line-height: 17px;
+            }
+
+            a {
+                color: $color-green-dark;
+                font-size: 13px;
+                font-weight: 300;
+                text-decoration: none;
+                &:hover {
+                    color: $color-green;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .footer {
+        .container {
+            padding: 30px 0px;
+        }
+    }    
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        .container {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .footer {
+        .container {
+            padding: 20px 0px;
+            flex-direction: column;
+        }
+        .term {
+            .containerTerm {
+                text-align: center;
+                row-gap: 10px;
+                a {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}

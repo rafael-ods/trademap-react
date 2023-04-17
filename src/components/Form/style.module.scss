@@ -1,0 +1,35 @@
+@import '../../style/variable';
+
+.form {
+    padding-left: 10%;
+    &__title {
+        color: #EFEFEF;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        text-transform: uppercase;
+        margin-bottom: 35px;
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .form {
+        padding-left: 3%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .form {
+        width: 50%;
+
+        &__btn {
+            justify-content: flex-start;
+        }
+    }
+}

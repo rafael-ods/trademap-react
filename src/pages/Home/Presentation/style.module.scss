@@ -1,0 +1,146 @@
+@import '../../../style/variable';
+
+.section {
+    background: $bg-grandient;
+    padding: 10px 10px 0px 10px;
+
+    .container {
+        margin: 0 auto;
+        max-width: 1140px;
+        display: flex;
+        justify-content: space-between;
+
+        .containerContext {
+            margin-top: 55px;
+
+            &__title {
+                color: $color-green;
+                font-weight: 700;
+                font-size: 35px;
+                line-height: 42px;
+                margin: 32.5px 0px 21.5px 0px;
+                text-transform: uppercase;
+            }
+
+            &__paragraph {
+                color: $color-white-ligth;
+                font-weight: 200;
+                font-size: 22px;
+                line-height: 33px;
+                margin-bottom: 27px;
+            }
+
+            &__highlighted {
+                color: $color-white;
+                font-weight: 700;
+                font-size: 22px;
+                line-height: 26px;
+            }
+
+            .containerButton {
+                display: flex;
+                flex-direction: column;
+                margin-top: 25px;
+                margin-bottom: 100px;
+                row-gap: 5px;
+            }
+        }
+
+        .containerImage {
+            position: relative;
+            align-self: flex-end;
+
+            &__qrcode {
+                background: url('../../../assets/image/qrcode.png') center / cover no-repeat;
+                width: 142.5px;
+                height: 142.5px;
+                position: absolute;
+                bottom: 100px;
+                left: -100px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .section {
+        .container {
+            .containerContext {
+                margin-top: 30px;
+
+                &__paragraph {
+                    br {
+                        display: none
+                    }
+                }
+            }
+
+            .containerImage {
+                &__qrcode {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section {
+        .container {
+            .containerContext {
+                &__title {
+                    br {
+                        display: none;
+                    }
+                }
+            }
+
+            .containerImage {
+                &__img {
+                    width: 337px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .section {
+        padding: 0px 7%;
+
+        .container {
+            flex-direction: column;
+
+            .containerContext {
+                padding: 10px;
+                &__title {
+                    font-size: 24px;
+                    line-height: 1.2em;
+                }
+
+                &__paragraph, &__highlighted {
+                    font-size: 17px;
+                    line-height: 1.3em;
+                }
+
+                .containerButton {
+                    margin-bottom: 33px;
+                }
+            }
+            .containerImage {
+                &__img {
+                    width: 100%;
+                }
+            }
+            
+        }
+    }
+}
+
+// @media screen and (max-width: 360px) {
+// //     .section {
+// //        .container {
+        
+// //        }
+// //     }
+// }

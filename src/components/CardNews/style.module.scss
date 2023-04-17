@@ -1,0 +1,50 @@
+@import '../../style/variable';
+
+.card {
+    display: flex;
+    align-items: flex-start;
+    width: 267.64px;
+    column-gap: 15px;
+
+    &__img {
+        border-radius: 15px;
+        width: 124.34px;
+        height: 124.34px;
+    }
+
+    &__title {
+        color: $bg-black;
+        font-size: 13px;
+        line-height: 1.2em;
+        font-weight: 800;
+        margin-bottom: 10px;
+    }
+
+    &__span {
+        color: $bg-black;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 22px;
+        display: flex;
+        align-items: center;
+        column-gap: 2px;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .card {
+        width: 238.06px;
+        &__img {
+            width: 110.06px;
+            height: 110.06px;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .card {
+        width: 100%;
+        
+    }
+}

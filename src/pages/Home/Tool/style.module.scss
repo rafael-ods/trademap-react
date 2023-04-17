@@ -1,0 +1,124 @@
+@import '../../../style/variable';
+
+
+.section {
+    background-color: $color-white;
+    padding: 10px;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1140px;
+        margin: 0 auto;
+
+        .cell {
+            background: url('../../../assets/image/Mockup-TradeMap-Telas2-462x1024.png.png') center / cover no-repeat;
+            width: 219.95px;
+            height: 486.61px;
+            margin: 70px 0px;
+        }
+
+        .containerContext {
+            width: 693px;
+
+            &__title {
+                color: $color-green-ligth;
+                font-weight: 700;
+                font-size: 32px;
+                line-height: 38px;
+                margin-bottom: 97px;
+            }
+
+            .menuList {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                row-gap: 30px;
+
+                &__item {
+                    width: 233.48px;
+                }
+
+                &__img {
+                    background: rgba(234, 230, 230, 0.38);
+                    border-radius: 17px;
+                    padding: 8px;
+                }
+
+                &__paragraph {
+                    color: $bg-black;
+                    font-size: 16px;
+                    line-height: 19px;
+                    margin-top: 17.59px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .section {
+        .container {
+            .cell {
+                margin: 0px;
+            }
+
+            .containerContext {
+                width: 50%;
+
+                &__title {
+                    margin-bottom: 50px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section {
+        .container {
+            .cell {
+                width: 144.77px;
+                height: 320.72px;
+            }
+
+            .containerContext {
+                width: 470px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .section {
+        padding: 7%;
+
+        .container {
+            .cell {
+                display: none;
+            }
+
+            .containerContext {
+                &__title {
+                    font-size: 24px;
+                    line-height: 1.2em;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 320px) {
+    .section {
+        .container {
+            .containerContext {
+                &__title {
+                    font-size: 22px;
+                }
+            }
+
+        }
+    }
+}

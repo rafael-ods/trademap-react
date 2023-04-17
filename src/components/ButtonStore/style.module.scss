@@ -1,0 +1,17 @@
+@import '../../style/variable';
+
+.button {
+    background: rgba(255, 255, 255, 0.002);
+    box-shadow: 6px -6px 13px rgba(17, 93, 96, 0.18);
+}
+
+.button.background {
+    background: rgba(255, 255, 255, 0.002);
+    box-shadow: 5px 5px 15px 1px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 500px) {
+    .button.button.background {
+        width: 100%;
+    }
+}

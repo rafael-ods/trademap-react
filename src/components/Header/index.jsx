@@ -8,6 +8,7 @@ import Button from "components/Button";
 import { ReactComponent as IconUser } from "assets/image/icone-user.svg";
 import { ReactComponent as IconLogin } from "assets/image/icone-login.svg";
 import { FiMenu } from 'react-icons/fi'
+import NavBar from "components/NavBar";
 
 const Header = () => {
   return (
@@ -61,6 +62,7 @@ const Header = () => {
             onClick={() => console.log('estou clicando aqui')}
           />
       </div>
+      <NavBar/>
     </header>
   );
 };

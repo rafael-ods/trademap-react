@@ -14,7 +14,7 @@ export const navList = [
     },
     {
         id: 2,
-        title: 'Liga',
+        title: 'Ligas',
         icon: img2,
         alt: 'icone do escudo',
         link: 'https://trademap.com.br/liga'

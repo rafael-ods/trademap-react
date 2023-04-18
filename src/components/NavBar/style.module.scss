@@ -1,74 +1,88 @@
 @import '../../style/variable';
 
+@mixin font-style-link {
+    color: $color-green;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 22px;
+    text-decoration: none;
+}
+
 .menu {
     display: none;
-
-    .boxLogo {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 15px;
-
-        &__icon {
-            color: $color-white;
-            font-size: 30px;
-        }
-    }
-
-    .menuList {
-        &__item {
-            padding: 10px 20px;
-
-            &:nth-child(4) {
-                margin-bottom: 20px;
-            }
-        }
-
-        &__link {
-            display: block;
-            color: $color-green;
-            font-weight: 400;
-            font-size: 17px;
-            line-height: 22px;
-            text-decoration: none;
-        }
-
-    }
-
-    .menuIcon {
-        border-top: 1px solid #ffffff4a;
-        border-bottom: 1px solid #ffffff4a;
-        width: 80%;
-        padding: 10px 0px;
-        margin-bottom: 25px;
-
-        &__item {
+        background: url('../../assets/image/backgroundmobile.webp') left bottom / cover no-repeat; 
+        position: fixed;
+        top: 0%;
+        width: 100%;
+        z-index: 10;
+        
+        .containerBg {
+            padding: 10px 30px;
+            background: $bg-grandient;
+            opacity: 0.86;
+            width: 100%;
+            min-height: 100vh;
+            
+        .boxLogo {
             display: flex;
             align-items: center;
-            padding: 10px 20px;
-
-            &:nth-child(1) {
-                display: none;
-            }
-
-            &:nth-child(3)::after {
-                content: "Map";
-                color: $color-green;
-                font-weight: 400;
-                font-size: 17px;
-                line-height: 22px;
+            justify-content: space-between;
+            margin-bottom: 15px;
+    
+            &__icon {
+                color: $color-white;
+                font-size: 30px;
             }
         }
-
-        &__link {
-            display: flex;
-            align-items: center;
-            column-gap: 10px;
-            color: $color-green;
-            font-weight: 400;
-            font-size: 17px;
-            line-height: 22px;
-            text-decoration: none;
+    
+        .menuList {
+            &__item {
+                padding: 9px 20px;
+    
+                &:nth-child(4) {
+                    margin-bottom: 20px;
+                }
+            }
+    
+            &__link {
+                display: block;
+                @include font-style-link
+                
+            }
+    
+        }
+    
+        .menuIcon {
+            border-top: 1px solid #ffffff4a;
+            border-bottom: 1px solid #ffffff4a;
+            width: 80%;
+            padding: 10px 0px;
+            margin-bottom: 25px;
+    
+            &__item {
+                display: flex;
+                align-items: center;
+                padding: 10px 20px;
+    
+                &:nth-child(1) {
+                    display: none;
+                }
+    
+                &:nth-child(3)::after {
+                    content: "Map";
+                    color: $color-green;
+                    font-weight: 400;
+                    font-size: 17px;
+                    line-height: 22px;
+                }
+            }
+    
+            &__link {
+                display: flex;
+                align-items: center;
+                column-gap: 10px;
+                @include font-style-link
+            }
         }
     }
 }
@@ -76,15 +90,6 @@
 @media screen and (max-width: 500px) {
     .menu {
         display: block;
-        background: url('../../assets/image/backgroundmobile.webp') bottom left / cover no-repeat;
-        
-        position: absolute;
-        top: 0%;
-        right: -100vw;
-
-        padding: 10px 30px;
-        width: 100%;
-        min-height: 100vh;
-        z-index: 10;
+        transition:  0.3s, border-radius 0.3s, opacity 0.3s;
     }
 }

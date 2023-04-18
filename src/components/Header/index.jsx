@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./style.module.scss";
 import NavIcon from "./NavIcon";
 import { NavLink } from "react-router-dom";
@@ -7,17 +7,23 @@ import { listHeader } from "./ListHeader";
 import Button from "components/Button";
 import { ReactComponent as IconUser } from "assets/image/icone-user.svg";
 import { ReactComponent as IconLogin } from "assets/image/icone-login.svg";
-import { FiMenu } from 'react-icons/fi'
+import { FiMenu } from "react-icons/fi";
 import NavBar from "components/NavBar";
 
 const Header = () => {
+  const [showmenu, setShowmenu] = useState(false);
+
   return (
     <header className={style.header}>
       <NavIcon />
       <div className={style.container}>
         <nav className={style.menu}>
           <NavLink to="/">
-            <img className={style.menu__logo} src={logoTrademap} alt="Logotipo da empresa trademap" />
+            <img
+              className={style.menu__logo}
+              src={logoTrademap}
+              alt="Logotipo da empresa trademap"
+            />
           </NavLink>
           <ul className={style.menuList}>
             {listHeader.map((list) => {
@@ -48,21 +54,22 @@ const Header = () => {
               Trademap Web
             </Button>
           </NavLink>
-          <NavLink 
+          <NavLink
             style={{ textDecoration: "none" }}
-            to="https://rafael-ods.github.io/Login-TradeMap/">
-          <Button >
-            <IconUser />
-            Cadastre-se Grátis!
-          </Button>
+            to="https://rafael-ods.github.io/Login-TradeMap/"
+          >
+            <Button>
+              <IconUser />
+              Cadastre-se Grátis!
+            </Button>
           </NavLink>
         </nav>
-          <FiMenu 
-            className={style.menuHamburguer}
-            onClick={() => console.log('estou clicando aqui')}
-          />
+        <FiMenu
+          className={style.menuHamburguer}
+          onClick={() => setShowmenu((old) => !old)}
+        />
       </div>
-      <NavBar/>
+      <NavBar showMenu={showmenu} />
     </header>
   );
 };

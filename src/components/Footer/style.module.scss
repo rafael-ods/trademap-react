@@ -125,6 +125,8 @@
         }
         .term {
             .containerTerm {
+                display: flex;
+                justify-content: center;
                 text-align: center;
                 row-gap: 10px;
                 a {

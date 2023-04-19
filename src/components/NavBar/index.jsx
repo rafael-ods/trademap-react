@@ -13,13 +13,13 @@ const NavBar = ({ showMenu }) => {
     <aside className={style.menu} style={{ right: showMenu ? 0 : "-100vw" }}>
       <div className={style.containerBg}>
         <div className={style.boxLogo}>
-          <NavLink to="/">
+          <a href="/">
             <img
               className={style.boxLogo__logoTradmap}
               src={logoTrademap}
               alt="Logotipo da empresa trademap"
             />
-          </NavLink>
+          </a>
           <div onClick={() => console.log('estou aqui')}>
             <CgClose className={style.boxLogo__icon} />
           </div>

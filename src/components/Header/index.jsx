@@ -18,13 +18,13 @@ const Header = () => {
       <NavIcon />
       <div className={style.container}>
         <nav className={style.menu}>
-          <NavLink to="/">
+          <a href="/">
             <img
               className={style.menu__logo}
               src={logoTrademap}
               alt="Logotipo da empresa trademap"
             />
-          </NavLink>
+          </a>
           <ul className={style.menuList}>
             {listHeader.map((list) => {
               return (

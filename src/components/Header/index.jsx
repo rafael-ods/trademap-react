@@ -69,7 +69,7 @@ const Header = () => {
           onClick={() => setShowmenu((old) => !old)}
         />
       </div>
-      <NavBar showMenu={showmenu} />
+      <NavBar showMenu={showmenu} setShowmenu={setShowmenu} />
     </header>
   );
 };

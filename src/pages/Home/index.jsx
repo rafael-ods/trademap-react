@@ -1,7 +1,7 @@
 import React from 'react'
 import Presentation from './Presentation'
 import Tools from './Tool'
-import List from './List'
+// import List from './List'
 import Users from './Users'
 import MultiBroker from './MuiltBroker'
 import News from './News'
@@ -11,7 +11,7 @@ const Home = () => {
     <main>
       <Presentation/>
       <Tools/>
-      <List/>
+      {/* <List/> */}
       <Users/>
       <MultiBroker/>
       <News/>

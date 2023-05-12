@@ -10,64 +10,64 @@
 
 .menu {
     display: none;
-        background: url('../../assets/image/backgroundmobile.webp') left bottom / cover no-repeat; 
-        position: fixed;
-        top: 0%;
+    background: url('/assets/image/backgroundmobile.webp') left bottom / cover no-repeat;
+    position: fixed;
+    top: 0%;
+    right: -100vw;
+    width: 100%;
+    z-index: 10;
+
+    .containerBg {
+        padding: 10px 30px;
+        background: $bg-grandient;
+        opacity: 0.86;
         width: 100%;
-        z-index: 10;
-        
-        .containerBg {
-            padding: 10px 30px;
-            background: $bg-grandient;
-            opacity: 0.86;
-            width: 100%;
-            min-height: 100vh;
-            
+        min-height: 100vh;
+
         .boxLogo {
             display: flex;
             align-items: center;
             justify-content: space-between;
             margin-bottom: 15px;
-    
+
             &__icon {
                 color: $color-white;
                 font-size: 30px;
             }
         }
-    
+
         .menuList {
             &__item {
                 padding: 9px 20px;
-    
+
                 &:nth-child(4) {
                     margin-bottom: 20px;
                 }
             }
-    
+
             &__link {
                 display: block;
                 @include font-style-link
-                
             }
-    
+
         }
-    
+
         .menuIcon {
             border-top: 1px solid #ffffff4a;
             border-bottom: 1px solid #ffffff4a;
             width: 80%;
             padding: 10px 0px;
             margin-bottom: 25px;
-    
+
             &__item {
                 display: flex;
                 align-items: center;
                 padding: 10px 20px;
-    
+
                 &:nth-child(1) {
                     display: none;
                 }
-    
+
                 &:nth-child(3)::after {
                     content: "Map";
                     color: $color-green;
@@ -76,7 +76,7 @@
                     line-height: 22px;
                 }
             }
-    
+
             &__link {
                 display: flex;
                 align-items: center;
@@ -90,6 +90,10 @@
 @media screen and (max-width: 500px) {
     .menu {
         display: block;
-        transition:  0.3s, border-radius 0.3s, opacity 0.3s;
+        transition: 0.3s, border-radius 0.3s, opacity 0.3s;
+
+        &--active {
+            right: 0;
+        }
     }
 }

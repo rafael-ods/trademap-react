@@ -67,7 +67,7 @@ const NavBar = ({ showMenu, setShowmenu }) => {
           style={{ textDecoration: "none" }}
           to="https://rafael-ods.github.io/Login-TradeMap/"
         >
-          <Button btnMobileTransparent="mobile">
+          <Button btnMobileTransparent="transparent">
             <IconLogin />
             TradeMap Web
           </Button>

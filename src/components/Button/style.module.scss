@@ -29,18 +29,22 @@
         transition-timing-function: ease-out;
         background: $bg-grandient-hover;
     }
+
+    @media screen and (max-width: 500px) {
+        width: 100%;
+        margin-bottom: 5%;
+        column-gap: 70px;
+    }
 }
 
 .button.transparent {
     color: $color-green;
     background: $bg-gray-dark;
-
     border-style: solid;
     border-width: 1px 1px 1px 1px;
     border-color: $color-green;
     box-shadow: none;
     padding: 11px 14px;
-
     font-weight: 100;
     font-size: 12px;
     line-height: 12px;
@@ -60,17 +64,3 @@
     }
 }
 
-.button.mobile {
-    color: $color-green;
-    background: transparent;
-    box-shadow: none;
-    padding: 11px 14px;
-    margin-bottom: 10px;
-    font-family: "Metropolis", Sans-serif;
-    text-transform: none;
-    font-size: 17px;
-    font-weight: 300;
-    &:hover {
-        transform: none;
-    }
-}
